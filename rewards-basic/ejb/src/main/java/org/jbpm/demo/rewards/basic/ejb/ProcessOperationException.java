@@ -1,4 +1,4 @@
-package com.sample;
+package org.jbpm.demo.rewards.basic.ejb;
 
 /**
  * 

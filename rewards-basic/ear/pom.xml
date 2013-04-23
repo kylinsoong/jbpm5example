@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <artifactId>rewards-basic-ear</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>org.jbpm.demo</groupId>
+   <artifactId>jbpm-rewards-basic-ear</artifactId>
+   <version>1.0</version>
   <packaging>ear</packaging>
-  <name>rewards-basic-ear</name>
+  
+<name>jBPM Demo: rewards-basic-ear</name>
 
   <parent>
-    <groupId>org.example</groupId>
-    <artifactId>rewards-basic</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>org.jbpm.demo</groupId>
+    <artifactId>jbpm-rewards-basic</artifactId>
+    <version>1.0</version>
   </parent>
 
   <build>
@@ -20,12 +23,12 @@
           <displayName>rewards-basic</displayName>
           <modules>
             <ejbModule>
-              <groupId>org.example</groupId>
-              <artifactId>rewards-basic-ejb</artifactId>
+              <groupId>org.jbpm.demo</groupId>
+              <artifactId>jbpm-rewards-basic-ejb</artifactId>
             </ejbModule>
             <webModule>
-              <groupId>org.example</groupId>
-              <artifactId>rewards-basic-war</artifactId>
+              <groupId>org.jbpm.demo</groupId>
+              <artifactId>jbpm-rewards-basic-war</artifactId>
               <contextRoot>rewards-basic</contextRoot>
             </webModule>
             <jarModule>
@@ -46,12 +49,12 @@
               <includeInApplicationXml>true</includeInApplicationXml>
               <bundleDir>/lib</bundleDir>
             </jarModule>
-            <jarModule>
+            <!--  jarModule>
               <groupId>com.thoughtworks.xstream</groupId>
               <artifactId>xstream</artifactId>
               <includeInApplicationXml>true</includeInApplicationXml>
               <bundleDir>/lib</bundleDir>
-            </jarModule>
+            </jarModule-->
             <jarModule>
               <groupId>org.drools</groupId>
               <artifactId>drools-compiler</artifactId>
@@ -89,12 +92,12 @@
               <bundleDir>/lib</bundleDir>
             </jarModule>
 
-            <jarModule>
+            <!--  jarModule>
               <groupId>net.sourceforge.jexcelapi</groupId>
               <artifactId>jxl</artifactId>
               <includeInApplicationXml>true</includeInApplicationXml>
               <bundleDir>/lib</bundleDir>
-            </jarModule>
+            </jarModule-->
             <jarModule>
               <groupId>com.google.protobuf</groupId>
               <artifactId>protobuf-java</artifactId>
@@ -150,7 +153,7 @@
           </modules>
           <jboss>
             <loader-repository>
-              example.com:loader=rewards-basic
+              demo.com:loader=rewards-basic
             </loader-repository>
             <loader-repository-config>
               java2ParentDelegation=false
@@ -163,16 +166,62 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.example</groupId>
-      <artifactId>rewards-basic-ejb</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <groupId>org.jbpm.demo</groupId>
+      <artifactId>jbpm-rewards-basic-ejb</artifactId>
+      <version>1.0</version>
       <type>ejb</type>
     </dependency>
     <dependency>
-      <groupId>org.example</groupId>
-      <artifactId>rewards-basic-war</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <groupId>org.jbpm.demo</groupId>
+      <artifactId>jbpm-rewards-basic-war</artifactId>
+      <version>1.0</version>
       <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>org.mvel</groupId>
+      <artifactId>mvel2</artifactId>
+      <version>2.1.4.Final</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>antlr-runtime</artifactId>
+      <version>3.3</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jdt.core.compiler</groupId>
+      <artifactId>ecj</artifactId>
+      <version>3.5.1</version>
+      <type>jar</type>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>antlr-runtime</artifactId>
+      <version>3.3</version>
+      <type>jar</type>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-decisiontables</artifactId>
+      <version>${drools.version}</version>
+      <type>jar</type>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-templates</artifactId>
+      <version>${drools.version}</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>2.4.1</version>
+      <type>jar</type>
     </dependency>
   </dependencies>
 </project>
+

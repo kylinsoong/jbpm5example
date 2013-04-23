@@ -1,4 +1,4 @@
-package com.sample;
+package org.jbpm.demo.rewards.basic;
 
 import java.io.IOException;
 
@@ -9,6 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.jbpm.demo.rewards.basic.ejb.ProcessLocal;
 
 public class ProcessServlet extends HttpServlet {
 

@@ -1,4 +1,4 @@
-package com.sample;
+package org.jbpm.demo.rewards.basic;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.jbpm.demo.rewards.basic.ejb.ProcessOperationException;
+import org.jbpm.demo.rewards.basic.ejb.TaskLocal;
 import org.jbpm.task.query.TaskSummary;
 
 public class TaskServlet extends HttpServlet {

@@ -1,4 +1,4 @@
-package com.sample;
+package org.jbpm.demo.rewards.basic.ejb;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -60,7 +60,7 @@ public class ProcessBean implements ProcessLocal {
             // start a new process instance
             Map<String, Object> params = new HashMap<String, Object>();
             params.put("recipient", recipient);
-            ProcessInstance processInstance = ksession.startProcess("com.sample.rewards-basic", params);
+            ProcessInstance processInstance = ksession.startProcess("org.jbpm.demo.rewards-basic", params);
 
             processInstanceId = processInstance.getId();
 

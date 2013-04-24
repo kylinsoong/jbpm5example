@@ -3,6 +3,8 @@ package org.jbpm.demo.rewards.basic.ejb;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.ejb.Local;
+import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
@@ -32,6 +34,8 @@ import org.jbpm.task.service.PermissionDeniedException;
 import org.jbpm.task.service.local.LocalTaskService;
 
 @Stateless
+@Remote(TaskRemote.class)
+@Local(TaskLocal.class)
 @TransactionManagement(TransactionManagementType.BEAN)
 public class TaskBean implements TaskLocal {
 
@@ -58,7 +62,7 @@ public class TaskBean implements TaskLocal {
         }
 
         ksession.dispose();
-
+        
         return list;
     }
 

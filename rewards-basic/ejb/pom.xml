@@ -37,103 +37,31 @@
     </plugins>
   </build>
 
-  <dependencies>
+	<dependencies>
 
-    <dependency>
-      <groupId>javax.ejb</groupId>
-      <artifactId>ejb-api</artifactId>
-      <version>3.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>javax.persistence</groupId>
-      <artifactId>persistence-api</artifactId>
-      <version>1.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>javax.transaction</groupId>
-      <artifactId>jta</artifactId>
-      <version>1.1</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>javax.annotation</groupId>
-      <artifactId>jsr250-api</artifactId>
-      <version>1.0</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <!-- Drools dependency -->
 		<dependency>
-	        <groupId>org.drools</groupId>
-	        <artifactId>drools-core</artifactId>
-	        <version>${drools.version}</version>
+	    	<groupId>javax.ejb</groupId>
+	     	<artifactId>ejb-api</artifactId>
+	        <version>3.0</version>
+	        <scope>provided</scope>
 		</dependency>
 		<dependency>
-	        <groupId>org.drools</groupId>
-	        <artifactId>drools-compiler</artifactId>
-	        <version>${drools.version}</version>
+	    	<groupId>javax.persistence</groupId>
+	        <artifactId>persistence-api</artifactId>
+	        <version>1.0</version>
+	        <scope>provided</scope>
 		</dependency>
 		<dependency>
-	        <groupId>org.drools</groupId>
-	        <artifactId>drools-persistence-jpa</artifactId>
-	        <version>${drools.version}</version>
-		</dependency>
-		
-		<!-- jBPM dependency -->
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-flow</artifactId>
-	        <version>${jbpm.version}</version>
+	    	<groupId>javax.transaction</groupId>
+	        <artifactId>jta</artifactId>
+	        <version>1.1</version>
+	        <scope>provided</scope>
 		</dependency>
 		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-flow-builder</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency> 
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-persistence-jpa</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency> 
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-bam</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency> 
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-bpmn2</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency> 
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-bpmn2-emfextmodel</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency> 
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-workitems</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency> 
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-human-task</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency> 
-		<dependency>
-	        <groupId>org.jbpm</groupId>
-	        <artifactId>jbpm-test</artifactId>
-	        <version>${jbpm.version}</version>
-		</dependency>
-  
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.5</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+	    	<groupId>javax.annotation</groupId>
+	        <artifactId>jsr250-api</artifactId>
+	        <version>1.0</version>
+	        <scope>provided</scope>
+    	</dependency>
+	</dependencies>
 </project>

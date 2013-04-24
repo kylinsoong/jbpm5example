@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.ejb.Local;
+import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
@@ -31,6 +33,8 @@ import org.jbpm.task.service.UserGroupCallbackManager;
 import org.jbpm.task.service.local.LocalTaskService;
 
 @Stateless
+@Remote(ProcessRemote.class)
+@Local(ProcessLocal.class)
 @TransactionManagement(TransactionManagementType.BEAN)
 public class ProcessBean implements ProcessLocal {
 

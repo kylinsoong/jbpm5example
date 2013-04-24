@@ -1,5 +1,5 @@
 <%@ page import="org.jbpm.task.query.TaskSummary" %>
-<%@ page import="java.util.List" %>
+<%@ page import="java.util.*" %>
 <html>
 <head>
 <title>Task management</title>
@@ -12,7 +12,17 @@
 <th>Task Id</th>
 <th>ProcessInstance Id</th>
 <th>Action</th>
-<% for (TaskSummary task : (List<TaskSummary>)request.getAttribute("taskList")) { %>
+<% 
+
+List<Object> list = (List<Object>)request.getAttribute("taskList");
+for(Object obj : list) {
+	org.jbpm.task.query.TaskSummary taskSummary = (org.jbpm.task.query.TaskSummary)obj;
+	System.out.println(taskSummary);	
+}
+
+for (TaskSummary task : (List<TaskSummary>)request.getAttribute("taskList")) { 
+
+%>
 <tr>
 <td><%= task.getName() %></td>
 <td><%= task.getId() %></td>
